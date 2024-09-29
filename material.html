@@ -48,10 +48,22 @@ opacity: 1; /*クリックやタップで中を表示させる*/
 display: block;/* 折り畳みになるように */
 }
 .openbox label {
-background: #ffa000;
 padding: 5px 10px;
-}
-
+    background: #ffa000;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    max-width: 250px;
+    padding: 10px 25px;
+    font-family: "Noto Sans JP";
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 1.8;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
 
 .button a {
     background: #ffa000;
@@ -138,7 +150,7 @@ body{
   <h2>素材</h2>
   <p>作ったのはいいものの、使い道が見つからなかった素材たち</p> <br/> <br/>
   <br/>
-<h3>魔法を使用したときのパーティクル</h3>  
+<h3>魔法を使用したときみたいなパーティクル</h3>  
 <!-- 折り畳み展開 -->
 <div class="openbox">
 <label for="pushlabel">▼ クリックまたはタップしてコードを表示</label>
