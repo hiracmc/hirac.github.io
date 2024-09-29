@@ -31,6 +31,24 @@ font-family: "Righteous", sans-serif;
 }
     a {color:orange}
 
+.openbox input {
+display: none; /* チェックボックスを隠す */
+}
+.openbox .boxshow {
+height: 0;
+opacity: 0; /* 折り畳んだ時に中を透明にする */
+display: none;/* 閉じた時に中身の要素をなくす */
+}
+.inputcss:checked + .boxshow {
+height: auto;
+opacity: 1; /*クリックやタップで中を表示させる*/
+display: block;/* 折り畳みになるように */
+}
+.openbox label {
+background: #babbbb;
+padding: 5px 10px;
+}
+
 
 .button a {
     background: #ffa000;
@@ -114,12 +132,81 @@ body{
     </h1>
 </div>
 　</p>
-  <h2>配布ワールド</h2>
-  <p>気になるワールドは、ダウンロードして遊んでみよう！</p> <br/> <br/>
+  <h2>素材</h2>
+  <p>作ったのはいいものの、使い道が見つからなかった素材たち</p> <br/> <br/>
   <br/>
-<h3>Pillars of Fortune</h3>  
-<div class="button">
-  <a href="https://drive.google.com/uc?export=download&id=1w5yPsxocb5N-AQiGdbUOzLUUnNLuLsiG">ダウンロード</a>
+<h3>魔法を使用したときのパーティクル</h3>  
+<!-- 折り畳み展開 -->
+<div class="openbox">
+<label for="pushlabel">▼ クリックまたはタップしてコードを表示</label>
+<input id="pushlabel" class="inputcss" type="checkbox" />
+<span class="boxshow">
+<!--折り畳まれる部分-->
+<ul>
+<li>Copy
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/blocks/wool_colored_white"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 100
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_disc": {
+				"offset": [0, 0.5, 0],
+				"radius": 2,
+				"surface_only": true,
+				"direction": [0, 1, 0]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 1.6
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(-180, 180)"
+			},
+			"minecraft:particle_initial_speed": "math.random(1, 4)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [0, 1, 0],
+				"linear_drag_coefficient": 4
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [0.25, 0.25],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 128,
+					"flipbook": {
+						"base_UV": ["Math.floor(v.particle_random_3 * 2) * 8", "Math.floor(v.particle_random_4 * 2) * 8"],
+						"size_UV": [8, 8],
+						"step_UV": [0, 16],
+						"frames_per_second": 12,
+						"max_frame": 8,
+						"stretch_to_lifetime": true
+					}
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"collision_drag": 0.4,
+				"collision_radius": 0.2
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": [1, 0.83137, 0, 1]
+			}
+		}
+	}
+}
+</li>
+</ul>
+</span>
 </div>
 </body>
 </html>
