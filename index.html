@@ -105,6 +105,32 @@ body{
     border-bottom: solid 2px #1d7fde;
     transform: translateY(3px);
 }
+
+    .c06{
+  background-image: linear-gradient(to top, #a675a5 3px, transparent 3px);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  &.active{
+    animation-name: kf_c06a, kf_c06b;
+    animation-duration: 1s, 0s;
+    animation-delay: 0s, 0.5s;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes kf_c06a {
+  50%{
+    background-size: 100% 100%;
+  }
+  100%{
+    background-size: 0% 100%;
+  }
+}
+@keyframes kf_c06b {
+  100%{
+    background-position: right bottom;
+  }
+}
 </style>
 </head>
 <body>
@@ -114,7 +140,7 @@ body{
     </h1>
 </div>
 　</p>
-  <h2>「楽しい」をあなたに</h2>
+  <h2><span class="c06 active">「楽しい」をあなたに</span></h2>
   <p>HIRACは、MinecraftBEの配布ワールド制作チームです。</p>
   <div class="button">
   <a href="https://hiracmc.github.io/hirac.github.io/world.html">配布ワールドを見る</a><br/><br/>
