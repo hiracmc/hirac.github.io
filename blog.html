@@ -3,139 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <title>ブログ一覧</title>
-    <link rel="stylesheet" href="http://www.kanda-it-school-square.com/sample/css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <style>>
+//コンテンツ幅やセクション見出しのスタイリング
+.ly_section {
+  padding: 100px 0;
+}
+  
+.ly_section_inner {
+  max-width: 1030px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+  
+.el_lv2Heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 70px;
+}
+  
+//ここから3カラム記事エリアのスタイリング
+.card_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+  
+.card_items > li {
+  width: 31%;
+  margin-right: 3.5%;
+  margin-bottom: 35px;
+}
+  
+.card_items > li:nth-of-type(3n) {
+  margin-right: 0;
+}
+  
+.card_item {
+  position: relative;
+  display: block;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+  
+//画像エリアのスタイリング
+.card_item:hover .card_item_imgWrapper::before {
+  opacity: 1;
+}
+  
+.card_item:hover .card_item_imgWrapper::after {
+  content: "Read More";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 1;
+}
+  
+.card_item_imgWrapper {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+  
+.card_item_imgWrapper::before, .card_item_imgWrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 2rem;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  opacity: 0;
+}
+  
+.card_item_imgWrapper > img {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+  
+//日時、タイトル、抜粋文テキスト部分のスタイリング
+.card_item_body {
+  height: 160px;
+  padding: 15px;
+}
+  
+.card_item_body > .card_item_time {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  display: block;
+}
+  
+.card_item_body > .card_item_ttl {
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+  
+.card_item_body > .card_item_txt {
+  color: #777;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}</style>
 </head>
 <body>
-    <div class="container">
-        <!-- ヘッダー ここから -->
-        <div>
-            <header class="clearfix">
-                <p class="description">東京都港区で創業50年の歴史を誇る 株式会社サンプル では、皆様の生活により根ざしたサービスを展開するよう、日々研究開発をしております。</p>
-                <div class="company-info">
-                    <a href="index.html">
-                        <h1>Company Name</h1>
-                    </a>
-                    <p>Your Company Slogan</p>
-                </div>
-                <div class="contact-info">
-                    <p>電話: <span>012-3456-7890</span></p>
-                    <p>受付時間: 平日 AM 10:00 〜 PM 5:00</p>
-                </div>
-            </header>
-        </div>
-        <!-- ヘッダー ここまで -->
- 
-        <!-- ナビゲーション ここから -->
-        <div>
-            <nav>
-                <ul class="clearfix">
-                    <li><a href="index.html">トップページ</a></li>
-                    <li><a href="service.html">サービス案内</a></li>
-                    <li><a href="company.html">会社案内</a></li>
-                    <li class="active"><a href="blog.html">ブログ</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- ナビゲーション ここまで -->
- 
-        <!-- メイン画像 ここから -->
-        <div class="box-column">
-            <div class="title-bar">
-                <div class="container">
-                    <h2>ブログ</h2>
-                </div>
+   <section class="ly_section">
+  <div class="ly_section_inner">
+    <h2 class="el_lv2Heading">３カラムの記事一覧</h2>
+    <!-- ここから3カラム記事エリア -->
+    <ul class="card_items">
+      <li>
+        <a class="card_item" href="#">
+          <article>
+            <figure class="card_item_imgWrapper">
+              <img src="assets/img/photo.jpg" alt="">
+            </figure>
+            <div class="card_item_body">
+              <time datetime="2021-04-30" class="card_item_time">
+                2021-04-30
+              </time>
+              <h3 class="card_item_ttl">
+                Webサイトの制作実績です
+              </h3>
+              <p class="card_item_txt">
+                本文の抜粋文です。本文の抜粋文です。本文の抜粋文です。本文の抜粋文です。
+              </p>
             </div>
-        </div>
-        <!-- メイン画像 ここまで -->
- 
-        <div class="clearfix">
-            <div class="main">
-                <!-- ブログ ここから -->
-                <div class="blog">
-                    <ul>
-                        <li class="clearfix">
-                            <div class="blog-img">
-                                <a href="blog.html">
-                                    <img src="images/0004.jpg" alt="" width="100" height="100">
-                                </a>
-                            </div>
-                            <div class="blog-info">
-                                <h3><a href="blog_entry.html">月一恒例の町内清掃で、嬉しい言葉をかけてもらいました！</a></h3>
-                                <span>2015年6月11日</span>
-                                <p>弊社では月に一度の恒例行事として、会社の敷地周辺の町内清掃を5年ほど前から行っています。</p>
-                                <a class="button" href="blog_entry.html">記事を読む</a>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="blog-img">
-                                <a href="blog.html">
-                                    <img src="images/0005.jpg" alt="" width="100" height="100">
-                                </a>
-                            </div>
-                            <div class="blog-info">
-                                <h3><a href="blog_entry.html">営業2課、吉田の結婚式に出席してきました。</a></h3>
-                                <span>2014年8月13日</span>
-                                <p>営業2課の吉田が結婚をいたしまして何人かのスタッフと一緒に式に参加してきました。</p>
-                                <a href="blog_entry.html" class="button">記事を読む</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- ブログ ここまで -->
+          </article>
+        </a>
+      </li>
+      <li>
+        <a class="card_item" href="#">
+          <article>
+            <figure class="card_item_imgWrapper">
+              <img src="assets/img/photo.jpg" alt="">
+            </figure>
+            <div class="card_item_body">
+              <time datetime="2021-04-30" class="card_item_time">
+                2021-04-30
+              </time>
+              <h3 class="card_item_ttl">
+                Webサイトの制作実績です
+              </h3>
+              <p class="card_item_txt">
+                本文の抜粋文です。本文の抜粋文です。本文の抜粋文です。本文の抜粋文です。
+              </p>
             </div>
- 
-            <div class="sidebar">
-                <!-- SNSリスト ここから -->
-                <aside class="share">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="images/bnr_facebook.png" alt="Facebookバナー">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/bnr_twitter.png" alt="Twitterバナー">
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
-                <!-- SNSリスト ここまで -->
-            </div>
-        </div>
- 
-        <!-- フッター ここから -->
-        <div>
-            <footer>
-                <div class="clearfix">
-                    <div class="footer-left">
-                        <a href="index.html">
-                            <h1 class="footer-logo">Company Name</h1>
-                            <p>Your Company Slogan</p>
-                        </a>
-                         
-                        <p>〒000-0000</p>
-                        <p>愛知県あま市○○○丁目○○番地</p>
-                        <p>電話:012-3456-7890</p>
-                        <p>受付時間: 平日 AM 10:00 〜 PM 5:00</p>
-                    </div>
- 
-                    <div class="footer-right">
-                        <ul class="clearfix">
-                            <li><a href="index.html">トップページ</a></li>
-                            <li><a href="service.html">サービス案内</a></li>
-                            <li><a href="company.html">会社案内</a></li>
-                            <li><a href="blog.html">ブログ</a></li>
-                            <li><a href="contact.html">お問い合わせ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="copyright">Copyright © 株式会社サンプル, all rights reserved.</p>
-            </footer>
-        </div>
-        <!-- フッター ここまで -->
-    </div>
+          </article>
+        </a>
+      </li>
+      <!-- 以下省略 -->
+    </ul>
+    <!-- 3カラム記事エリアここまで -->
+  </div>
+</section>
 </body>
 </html>
