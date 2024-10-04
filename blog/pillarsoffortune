@@ -150,7 +150,15 @@ body{
 個性的なKitもあるので、試合前に選んでおきましょう！ <br/>
       マップは6種類！ランダムに選ばれます！<br/><br/>
       Q.バグった時は？<br/>
-      A.チャット欄にて「/function stop」を実行してください！
+      A.チャット欄にて
+<br/>
+<br/>
+	<TEXTAREA ROWS=5 COLS=30 style="font-size:30px; border:thick ridge #aaaaaa;background-color:#6f6f6f;color:#ffffff;font-family:UniFont;" readonly>
+/function stop
+</TEXTAREA>
+<br/>
+<br/>
+を実行してください！
   <p/>
     <br/><br/><br/><br/>
 <h2>
