@@ -166,8 +166,27 @@ body{
   clip-path: inset(0);
 }   
 </style>
+	<script Language="JavaScript">
+<!--
+str="ここに表示したい文字";
+str+="ここに表示したい文字２";
+str+="ここに表示したい文字３";
+pStr="";
+count=0;
+function start()
+{
+if((count<str.length)&&document.all)
+{
+pStr+=str.charAt(count++);
+TEXT.innerText=pStr;
+setTimeout("start()",200);
+}
+}
+// -->
+</script>
 </head>
 <body>
+	<body onLoad="start()">
 <div id="ue">
   <div class="ue">
     <h1>
@@ -182,7 +201,7 @@ body{
   <h2><span class="c06 active">「楽しい」をあなたに</span></h2>
 </div>
 
-<p> HIRACは、MinecraftBEの配布ワールド制作チームです。</p>
+<p> <span ID="TEXT">HIRACは、MinecraftBEの配布ワールド制作チームです。</span></p>
     
   <div class="button">
   <a href="https://hiracmc.github.io/hirac.github.io/world.html">配布ワールドを見る</a><br/><br/>
