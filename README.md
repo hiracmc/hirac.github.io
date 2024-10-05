@@ -1,4 +1,4 @@
-[!](https://hiracmc.github.io/hirac.github.io/img/)
+![なんだこいつ](https://hiracmc.github.io/hirac.github.io/img/home)
 
 ## うぇむかむ！
 
