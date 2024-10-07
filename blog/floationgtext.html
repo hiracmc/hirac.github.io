@@ -191,6 +191,18 @@ document.execCommand("Copy");
 // コピーをお知らせする
 alert("コピーできました！ : " + copyTarget.value);
 }
+           // カウント用の変数
+let count = 0; 
+
+// いいねボタンの要素を取得
+const likeButton = document.getElementById("like");
+
+//取得したいいねボタンがクリックされた時、カウントを1つ増やして再代入する
+likeButton.addEventListener("click", function () {
+    count++;
+    const likeCountElement = document.getElementById("likeCount")
+    likeCountElement.textContent = count;
+})
 </script>
 </body>
 </html>
