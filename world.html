@@ -11,6 +11,26 @@
   color: #fff;
   background-color: #ffbb81;
 }
+
+    .line {
+  display: block;
+  position: relative;
+}
+.line::after {
+  background: linear-gradient(to right, #676767 0%,#3b79cc 50%,#42d3ed 100%);
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0;
+  transform: translateX(-50%);
+  transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.line.is-animated::after {
+  width: 100%;
+}
     
     
  body {
@@ -126,7 +146,7 @@ body{
 <div class="button">
   <a href="https://hiracmc.github.io/hirac.github.io/blog/pillarsoffortune">詳細を見る</a>
 </div>
-  <br/> <br/> <hr width="500" color="#676767"><br/>
+  <br/> <br/> <div class="line anim"></div><br/>
   <p>
   <img src="img/IMG_1112.jpeg" width="300" alt="サムネイル">
   </p>
