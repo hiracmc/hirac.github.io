@@ -38,6 +38,20 @@ function disp(){
     opacity: 1;
   }
 }
+	  
+.button.poyopoyo {
+  animation: poyopoyo 2s ease-out infinite;
+  opacity: 1;
+}
+@keyframes poyopoyo {
+  0%, 40%, 60%, 80% {
+    transform: scale(1.0);
+  }
+  50%, 70% {
+    transform: scale(0.95);
+  }
+}
+ 
 
 	  
 	  Body{
@@ -229,7 +243,7 @@ setTimeout("start()",200);
 </div>
 
 <div class="anim-box"><p>HIRACは、MinecraftBEの配布ワールド制作チームです。</p></div>
-    
+
   <div class="button">
   <a href="https://hiracmc.github.io/hirac.github.io/world.html">配布物を見る</a><br/><br/>
   </div>
