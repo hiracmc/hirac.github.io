@@ -22,15 +22,19 @@ function disp(){
     @import url('https://fonts.googleapis.com/css?family=Kosugi');
     @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
  
-.anim-box.fadein.is-animated {
-  animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+.anim-box.popup.is-animated {
+  animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
  
-@keyframes fadeIn {
+@keyframes popup {
   0% {
+    transform: translateY(40px) scale(0.8);
     opacity: 0;
   }
   100% {
+    transform: translateY(0) scale(1.0);
+  }
+  80%, 100% {
     opacity: 1;
   }
 }
