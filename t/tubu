@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HIRAC</title>
+  <meta charset="UTF-8">
+  <style> 
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Kosugi');
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+        ::selection {
+  color: #fff;
+  background-color: #ffbb81;
+}
+
+    .line {
+  display: block;
+  position: relative;
+}
+.line::after {
+  background: linear-gradient(to right, #676767 100%);
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0;
+  transform: translateX(-50%);
+  transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.line.is-animated::after {
+  width: 100%;
+}
+    
+    
+ body {
+  color: gray;
+   background: #fffdf6;
+}
+    h1 {
+font-family: "Righteous", sans-serif;
+      font-size: 40px;
+}
+    h2 {
+   font-family: 'Noto Sans JP', sans-serif;
+   text-align: center
+}
+    h3 {
+   font-family: "Righteous", sans-serif;
+   text-align: center
+      font-size: 30px;
+}
+    p {
+   font-family: 'Noto Sans JP', sans-serif;
+  text-align: center
+}
+    a {color:orange}
+
+
+.button a {
+    background: #ffa000;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    max-width: 250px;
+    padding: 10px 25px;
+    font-family: "Noto Sans JP";
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 1.8;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.button a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 2rem;
+  font-size: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+.button a:hover {
+  background: #a9e1ff;
+  color: #FFF;
+}
+    @keyframes shine {
+  33% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.button a:hover:after {
+  right: 1.4rem;
+}
+body{
+    vertical-align:middle; 
+    padding: 50px 0;
+    text-align: center;
+}
+.button a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #6bb6ff;
+    border-radius: 8px;
+    border-bottom: solid 5px #1d7fde;
+}
+.button a:hover {
+    border-bottom: solid 2px #1d7fde;
+    transform: translateY(3px);
+}
+</style>
+</head>
+<body>
+<div id="ue">
+    <h1>
+<a href="https://hiracmc.github.io/hirac.github.io/">HIRAC</a>
+    </h1>
+</div>
+　</p>
+  <h2>つぶやき</h2>
+  <p>気まぐれ日記。</p> <br/> <br/>
+  <br/>
+   <br/> <br/> <hr width="50%"></div><br/>
+  <p>
+<img src="t/" width="300" alt="サムネイル">
+  </p>
+<h3>2024/10/09 - Pillars of Fortuneを作った話</h3>  
+<p>
+なんか作れそうって思ったら作れた。
+</p>
+  <br/> <br/> <hr width="50%"></div><br/>
+</body>
+</html>
