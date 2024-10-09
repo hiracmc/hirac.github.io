@@ -4,6 +4,22 @@
   <title>HIRAC</title>
   <meta charset="UTF-8">
   <style> 
+hr {
+		border: none;
+		border-top: 3px double #333;
+		color: #333;
+		overflow: visible;
+		text-align: center;
+		height: 5px;
+	}
+ 
+	hr:after {
+		background: #fff;
+		content: '§';
+		padding: 0 4px;
+		position: relative;
+		top: -13px;
+	}
     @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Kosugi');
     @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
