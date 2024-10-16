@@ -69,7 +69,7 @@ var App = /** @class */ (function () {
             document.execCommand('copy');
             _this.copyToClipboardBtn.innerText = 'copied';
             setTimeout(function () {
-                _this.copyToClipboardBtn.innerText = 'copy to clipboard';
+                _this.copyToClipboardBtn.innerText = 'コピー';
             }, 2000);
         };
         this.updateUrl = function () {
