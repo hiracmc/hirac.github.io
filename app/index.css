@@ -11,6 +11,7 @@ body, div, input, select, button {
 body {
     margin: 0;
     padding: 0 20px;
+text-align: center
 }
 main {
     display: grid;
