@@ -1,3 +1,9 @@
+	      @font-face {
+  font-family: "UniFont";
+  src:
+    url("https://hiracmc.github.io/minehirac/unifont.woff"),
+    }
+
 body, div, input, select, button {
     font-family: sans-serif;
 }
