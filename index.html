@@ -21,7 +21,40 @@ function disp(){
     @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Kosugi');
     @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
- 
+
+	  body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.loading-icon {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow:
+    0 -30px 0 #e0eef0,     /*  上  */
+    21px -21px 0 #d0eff3,  /* 右上 */
+    30px 0 0 #bfecf1,      /*  右  */
+    21px 21px 0 #AEEBF2,   /* 右下 */
+    0 30px 0 #79C7D9,      /*  下  */
+    -21px 21px 0 #5EA4BF,  /* 左下 */
+    -30px 0 0 #5697BF,     /*  左  */
+    -21px -21px 0 #265C8C; /* 左上 */
+  animation: rotate 1s steps(8) 0s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .anim-box.popup.is-animated {
   animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
